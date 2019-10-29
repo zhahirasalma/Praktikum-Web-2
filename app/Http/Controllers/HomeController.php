@@ -22,11 +22,5 @@ class HomeController extends Controller
     	return view('ketiga');
     }
 
-    public function dashboard(){
-        return view('index');
-    }
 
-    public function tabel(){
-        return view('tabel');
-    }
 }

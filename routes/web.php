@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('dashboard');
 });
 
 Route::get('/register', 'LoginController@index');
@@ -24,5 +24,7 @@ Route::get('/ketiga', 'HomeController@index4');
 
 Route::get('/kategori', 'CategoryController@index');
 
-Route::get('/index', 'HomeController@dashboard');
-Route::get('/tabel', 'HomeController@tabel');
+Route::get('/dashboard', 'DashboardController@dashboard');
+Route::get('/dashboard', 'DashboardController@dashboard')->name('dashboard');
+Route::get('/charts', 'DashboardController@charts')->name('charts');
+Route::get('/tabel', 'DashboardController@tabel')->name('tabel');
