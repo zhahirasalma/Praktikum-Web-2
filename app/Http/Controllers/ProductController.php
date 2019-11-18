@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\FirstModel;
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = FirstModel::all();
-        return view('kategori')->with('kategori', $data);
+        //
     }
 
     /**
@@ -25,7 +23,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-       return view('tambah_kategori');
+        //
     }
 
     /**
@@ -36,14 +34,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama_kategori'=>'required',
-        ]);
-        $kategori = new FirstModel([
-            'nama_kategori' => $request->input('nama_kategori')
-        ]);
-        $kategori->save();
-        return redirect('kategori');
+        //
     }
 
     /**
@@ -54,7 +45,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**
@@ -65,9 +56,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-       $data = FirstModel::where('id_kategori', '=',$id)->firstOrFail();
-       return view('edit_kategori')->with('kategori', $data);
-        // echo "string";
+        //
     }
 
     /**
@@ -79,14 +68,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nama_kategori'=>'required',
-        ]);
-        $data=[
-            'nama_kategori'=>$request->nama_kategori,
-        ];
-        FirstModel::where('id_kategori',$id)->update($data);
-        return redirect('kategori');
+        //
     }
 
     /**
@@ -97,7 +79,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        FirstModel::where('id_kategori',$id)->delete();
-        return redirect('kategori');
+        //
     }
 }

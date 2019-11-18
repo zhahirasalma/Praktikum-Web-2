@@ -21,10 +21,13 @@ Route::get('/pertama', 'HomeController@index2');
 Route::get('/kedua', 'HomeController@index3');
 Route::get('/ketiga', 'HomeController@index4');
 
+Route::resource('/kategori', 'CategoryController');
 
-Route::get('/kategori', 'CategoryController@index');
 
 Route::get('/dashboard', 'DashboardController@dashboard');
 Route::get('/dashboard', 'DashboardController@dashboard')->name('dashboard');
 Route::get('/charts', 'DashboardController@charts')->name('charts');
 Route::get('/tabel', 'DashboardController@tabel')->name('tabel');
+//Route::get('/kategori', 'DashboardController@kategori')->name('kategori');
+
+
