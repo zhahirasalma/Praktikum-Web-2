@@ -25,7 +25,7 @@
                   </tr>
                 </tfoot>
                 <tbody>
-                  @foreach($kategori as $value):
+                  @foreach($kategori as $value)
                   <tr>
                     <td width="1">{{$value->id_kategori}}</td>
                     <td>{{$value->nama_kategori}}</td>

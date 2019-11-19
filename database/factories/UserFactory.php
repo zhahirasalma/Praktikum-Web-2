@@ -2,6 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
+use App\FirstModel;
+use App\ProdukModel;
+use App\PelangganModel;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -16,12 +19,25 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(FirstModel::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-        'remember_token' => Str::random(10),
+        'nama_kategori' => $faker->name,
     ];
+});
+
+$factory->define(ProdukModel::class, function(Faker $faker){
+	return[
+		'id_kategori' => $faker->numberBetween(1,3),
+		'nama' => $faker->name,
+		'harga' => $faker->randomNumber,
+	];
+});
+
+$factory->define(PelangganModel::class, function(Faker $faker){
+	return[
+		'nama' => $faker->name,
+		'email' => $faker->unique()->safeEmail,
+		'no_hp' => $faker->phoneNumber,
+		'alamat' => $faker->address,
+	];
 });

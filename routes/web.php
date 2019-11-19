@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('welcome');
 });
 
 Route::get('/register', 'LoginController@index');
@@ -31,3 +31,7 @@ Route::get('/tabel', 'DashboardController@tabel')->name('tabel');
 //Route::get('/kategori', 'DashboardController@kategori')->name('kategori');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

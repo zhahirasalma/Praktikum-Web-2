@@ -36,13 +36,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama_kategori'=>'required',
-        ]);
-        $kategori = new FirstModel([
-            'nama_kategori' => $request->input('nama_kategori')
-        ]);
-        $kategori->save();
+        // $request->validate([
+        //     'nama_kategori'=>'required',
+        // ]);
+        // $kategori = new FirstModel([
+        //     'nama_kategori' => $request->input('nama_kategori')
+        // ]);
+        // $kategori->save();
         return redirect('kategori');
     }
 

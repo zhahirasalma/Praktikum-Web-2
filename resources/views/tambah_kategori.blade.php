@@ -10,11 +10,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <form method="POST" action="{{route('kategori.store')}}">
+    <form action="{{route('kategori.store')}}" method="POST">
       @csrf
   <div class="form-group">
-    <label for="exampleInputEmail1">Input Kategori</label>
-    <input type="text" class="form-control" placeholder="Nama Kategori">
+    <label>Input Kategori</label>
+    <input type="text" class="form-control" placeholder="...">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

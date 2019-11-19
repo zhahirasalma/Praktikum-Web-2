@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\FirstModel;
+use App\ProdukModel;
+use App\PelangganModel;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,5 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        factory(FirstModel::class)->create();
+        factory(ProdukModel::class)->create();
+        factory(PelangganModel::class)->create();
     }
 }

@@ -14,6 +14,7 @@ class FirstModel extends Model
     protected $fillable = [
     	'id_kategori', 'nama_kategori',
     ];
+    public $timestamps = false;
 
     use SoftDeletes;
 
